@@ -1,12 +1,14 @@
 This script makes a candlestick data in very low time frames (seconds, milliseconds).
 
 **Abstract**
+
 The candlestick data for cryptocurrencies are avalible in many platforms but the time frames are standard and very low timeframes are not avalible for free.
 
 In this file the necessary means for making very low timeframe (1s) candlestick data (OHLCV) are provided. And also an example is provided in the file that generates candlestick data in 1s timeframe.
 
 
 **Logic**
+
 This conde gets the historical trades done in a time period and aggregates the trades in this range in desired intervals and generates japaneese candlestick data for this range and exports it as  a file.
 
 One very important thing about this script is that it uses binance's data and its integrated with it. So if you are using anotehr exchange's data, you have to change the column's names manully from code.
@@ -14,6 +16,7 @@ One very important thing about this script is that it uses binance's data and it
 Also its good to note that because biannce's historical tardes are provided in milliseconds, you can lower the timeframe even more and get the candlestick data for millisecond candles (1ms 10ms 100ms etc.)
 
 **How to work with this script**
+
 Because i needed to change a large amount of trades to LFT(Low timeframe) candlesticks, The code is designed to get all the files in a folder and generate the candlestick data for each file and save the candlestick data to another path. But if you want to read a single file, you can only put one file in the said folder.
 
 Another thing to note is for to increase performance of the script, we have saved the transactions as a dataframe in the format pf a pickle file. and we use pandas's read_pickle method to load the trades.
@@ -23,7 +26,7 @@ Another thing to note is for to increase performance of the script, we have save
 
     trades = pd.read_pickle(DATAPATH + file)
 
- Also it;s necessary to note that there are three constants you need to assign before starting the program:
+ Also it's necessary to note that there are three constants you need to assign before starting the program:
   
 
  - DATAPATH: The path you have saved your historical trades data
