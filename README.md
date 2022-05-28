@@ -36,7 +36,7 @@ Another thing to note is for to increase performance of the script, we have save
  - SAVEPATH: The path you want to save your candlestick data to
  - TF: the timeframe you want your candles to have (e.g. 1s, 10s and 30s). If you other timeframes, please change "timeFrames" method to your desire. Also if you want millisecond candles you have to add this manually to this method.
 
-IMPORTANT: Your historical trades has to be in the following format:
+IMPORTANT: Your historical trades has to be in the following format (The file's format depends on your method of reading the files. xlsx is for reading excel files but pickle files does'nt have any general extensions):
 
     f"/HistoricalTrades_{symbol}_{startId}____{endId}.xlsx"
 
